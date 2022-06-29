@@ -1,0 +1,27 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-server
+          uri: lb://userserver
+          predicates:
+            - Path=/api/user/**
+        - id: business-server
+          uri: lb://businessserver
+          predicates:
+            - Path=/api/business/**
+# 注册中心
+eureka:
+  instance:
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+  #客户端注册进eureka服务列表内, 集群用半角逗号隔开
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+
+

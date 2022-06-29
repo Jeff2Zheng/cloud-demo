@@ -1,0 +1,17 @@
+
+K
+java:S3740"/Provide the parametrized type for this generic.(Ëø¬U8ŸªÌ×ý/
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯‰Òƒûÿÿÿÿ8¯ªÌ×ý/
+?
+java:S1118"Hide this public constructor.(¯‰Òƒûÿÿÿÿ8¶ªÌ×ý/
+V
+java:S4719#"9Replace charset name argument with StandardCharsets.UTF_8(·šüõ8ÏªÌ×ý/
+O
+java:S1068"-Remove this unused "FILE_NAME" private field.(½¨‡Œûÿÿÿÿ8ïªÌ×ý/
+k
+java:S1192"OUse already-defined constant 'FILE_NAME' instead of duplicating its value here.(Ëø¬U8þªÌ×ý/
+l
+java:S2095#"OUse try-with-resources or close this "InputStreamReader" in a "finally" clause.(·šüõ8Î«Ì×ý/
+k
+java:S2095!"IUse try-with-resources or close this "InputStream" in a "finally" clause.(¿â›Ëüÿÿÿÿ8Þ«Ì×ý/

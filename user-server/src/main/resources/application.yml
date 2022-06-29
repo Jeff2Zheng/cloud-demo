@@ -1,0 +1,65 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: userserver
+  datasource:
+    username: root
+    password: zzl950606
+    url: jdbc:mysql://42.192.37.32:3306/jz_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update  # 第一次建表create  后面用update，要不然每次重启都会新建表
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+  mybatis-plus:
+    # 扫描 mapper.xml
+    mapper-locations: classpath:/mapper/*Mapper.xml
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+#es
+elasticsearch:
+  clientUrl: http://42.192.37.32:9200
+
+# 注册中心
+eureka:
+  instance:
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+  #客户端注册进eureka服务列表内, 集群用半角逗号隔开
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+# 指定哪个服务负载均衡方式
+businessserver:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机 RoundRobinRule轮询
+    eureka:
+      enable: true
+logging:
+  level:
+    jz.example: debug
+# FEIGN日志级别
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000  #单位毫秒
+        readTimeout: 10000
+        loggerLevel: basic
+  # feign 优化
+  httpclient:
+    enabled: true # 支持HttpClient的开关
+    max-connections: 200 # 最大连接数
+    max-connections-per-route: 50 # 单个路径的最大连接数
+
+

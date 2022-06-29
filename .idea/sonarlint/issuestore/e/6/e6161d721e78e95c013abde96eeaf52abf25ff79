@@ -1,0 +1,18 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.( Ã£¨ûÿÿÿÿ
+z
+java:S1192"_Define a constant instead of duplicating this literal "        \"type\": \"keyword\"
+" 3 times.(Úû¼œøÿÿÿÿ
+y
+java:S1192"^Define a constant instead of duplicating this literal "        \"copy_to\": \"all\"
+" 3 times.(úÙÎÿÿÿÿÿ
+w
+java:S1192"ZDefine a constant instead of duplicating this literal "        \"index\": false
+" 6 times.(÷ì€™8ƒ»Š0
+v
+java:S1192"`Define a constant instead of duplicating this literal "        \"type\": \"keyword\",
+" 6 times.(¯à°á
+a
+java:S1192	"KDefine a constant instead of duplicating this literal "      },
+" 15 times.(¥ÁÊÁ
