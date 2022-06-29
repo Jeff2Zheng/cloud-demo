@@ -24,7 +24,7 @@ public class UserController {
     private UserService UserService;
 
     @PostMapping("/getAll")
-    public User getById() {
+    public User getById() { 
         return UserService.getById();
     }
 
