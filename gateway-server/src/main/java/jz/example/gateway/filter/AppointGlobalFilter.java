@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
  * @Date 2022/3/13
  */
 @Component
-public class AppointGlobalFilter  implements GlobalFilter, Ordered {
+public class AppointGlobalFilter implements GlobalFilter, Ordered {
 
     private final Logger logger = LoggerFactory.getLogger(AppointGlobalFilter.class);
 
@@ -28,13 +28,14 @@ public class AppointGlobalFilter  implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         MultiValueMap<String,String> params = request.getQueryParams();
         String loginIP = params.getFirst("loginIP");
+        logger.info("请求路径为,{}", request.getURI());
         if(!"admin".equals(loginIP)){
             //相等 放行
-            logger.debug("请求放行");
+            logger.info("请求放行");
             return chain.filter(exchange);
         }
         //拦截
-        logger.debug("请求拦截");
+        logger.info("请求拦截");
         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
         return exchange.getResponse().setComplete();
     }
