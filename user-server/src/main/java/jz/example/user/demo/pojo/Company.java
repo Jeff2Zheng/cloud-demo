@@ -1,16 +1,13 @@
 package jz.example.user.demo.pojo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import jz.example.user.base.UserBaseModel;
-
-import javax.persistence.Entity;
 
 /**
  * @Author JZ
  * @Date 2022/3/13
  */
-@Entity
-@TableName("jz_company")
+//@Entity
+//@TableName("jz_company")
 public class Company extends UserBaseModel {
 
     private String companyName;

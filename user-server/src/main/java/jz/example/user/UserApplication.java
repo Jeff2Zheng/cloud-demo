@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "jz.example.feign")
-@MapperScan("jz.example.user.*.mapper")
+@MapperScan({"jz.example.user.*.mapper","jz.example.user.jzplatform.*.mapper"})
     public class UserApplication {
 
     public static void main(String[] args) {

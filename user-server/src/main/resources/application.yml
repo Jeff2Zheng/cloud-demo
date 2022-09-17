@@ -1,12 +1,14 @@
 server:
   port: 8010
+  servlet:
+    context-path: /api-user
 spring:
   application:
     name: userserver
   datasource:
     username: root
-    password: zzl950606
-    url: jdbc:mysql://42.192.37.32:3306/jz_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    password: jzz-root
+    url: jdbc:mysql://42.192.37.32:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
 #  jpa:
 #    hibernate:
