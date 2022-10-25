@@ -5,11 +5,15 @@ spring:
     name: gateway
   cloud:
     gateway:
+      httpclient:
+        connect-timeout: 2000
+        response-timeout: 10s
       routes:
         - id: user-server
           uri: lb://userserver
           predicates:
-            - Path=/api/user/**
+            - Path=/api-user/api/**
+            - Method=GET,POST
         - id: business-server
           uri: lb://businessserver
           predicates:

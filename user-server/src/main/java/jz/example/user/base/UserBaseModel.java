@@ -39,6 +39,9 @@ public abstract class UserBaseModel{
      */
     private Date modifyTime;
 
+    private Long companyId;
+
+
     public Long getId() {
         return id;
     }
@@ -76,5 +79,13 @@ public abstract class UserBaseModel{
 
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
+    }
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 }

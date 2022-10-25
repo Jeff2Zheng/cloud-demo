@@ -1,4 +1,4 @@
-package jz.example.user.demo.item;
+package jz.example.user.business.auth.item;
 
 import jz.example.user.base.UserBasePage;
 
@@ -8,7 +8,7 @@ import java.util.Date;
  * @Author JZ
  * @Date 2022/3/25
  */
-public class InfoQueryPageItem extends UserBasePage<InfoQueryPageItem> {
+public class UserAndCompanyPageItem extends UserBasePage<UserAndCompanyPageItem> {
 
     private Long companyId;
     private String mobile;
@@ -25,12 +25,25 @@ public class InfoQueryPageItem extends UserBasePage<InfoQueryPageItem> {
     private String companyAddress;
     private String busilicense;
 
+
+    public UserAndCompanyPageItem(long current, long size) {
+        super(current, size);
+    }
+
     public Long getCompanyId() {
         return companyId;
     }
 
     public void setCompanyId(Long companyId) {
         this.companyId = companyId;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getUserId() {
@@ -127,17 +140,5 @@ public class InfoQueryPageItem extends UserBasePage<InfoQueryPageItem> {
 
     public void setBusilicense(String busilicense) {
         this.busilicense = busilicense;
-    }
-
-    public InfoQueryPageItem(long current, long size) {
-        super(current, size);
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
     }
 }

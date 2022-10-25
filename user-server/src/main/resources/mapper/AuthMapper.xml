@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="jz.example.user.business.auth.mapper.AuthMapper">
+
+<!--    <select id="selectUserPage" resultType="jz.example.user.demo.item.InfoQueryPageItem">-->
+<!--        select *-->
+<!--        from jz_user-->
+<!--        <trim prefix="where" prefixOverrides="AND">-->
+<!--            <if test="mobile != null">-->
+<!--                mobile = #{mobile}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--    </select>-->
+
+<!--    <select id="selectUserAndCompanyPage" resultType="jz.example.user.demo.item.UserAndCompanyPageItem">-->
+<!--        select u.*,c.company_name,c.company_address,c.busilicense-->
+<!--        from jz_user u-->
+<!--        left join jz_company c on c.id = u.company_id-->
+<!--        <trim prefix="where" prefixOverrides="AND">-->
+<!--            <if test="mobile != null">-->
+<!--                mobile = #{mobile}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--    </select>-->
+
+</mapper>

@@ -1,9 +1,9 @@
-package jz.example.user.demo.mapper;
+package jz.example.user.business.auth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import jz.example.user.demo.item.InfoQueryPageItem;
-import jz.example.user.demo.item.UserAndCompanyPageItem;
-import jz.example.user.demo.pojo.User;
+import jz.example.user.business.auth.item.InfoQueryPageItem;
+import jz.example.user.business.auth.item.UserAndCompanyPageItem;
+import jz.example.user.business.auth.pojo.User;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * @Date 2022/3/26
  */
 @Repository
-public interface UserMapper extends BaseMapper<User> {
+public interface AuthMapper extends BaseMapper<User> {
 
     /**
      * 用户分页

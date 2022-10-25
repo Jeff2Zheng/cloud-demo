@@ -1,21 +1,23 @@
-package jz.example.user.demo.pojo;
+package jz.example.user.business.auth.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import jz.example.user.base.UserBaseModel;
 
+import javax.persistence.Entity;
 import java.util.Date;
 
 /**
  * @Author JZ
  * @Date 2022/3/13
  */
-//@Entity
-//@TableName("jz_user")
+@Entity
+@TableName("jz_user")
 public class User extends UserBaseModel {
 
-    private Long companyId;
     private String mobile;
     private String userId;
     private String email;
+    private String userName;
     private String pwd;
     private String sex;
     private String name;
@@ -24,12 +26,12 @@ public class User extends UserBaseModel {
     private Date lastLoginTime;
     private Date loginTime;
 
-    public Long getCompanyId() {
-        return companyId;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setCompanyId(Long companyId) {
-        this.companyId = companyId;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getMobile() {
