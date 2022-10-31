@@ -1,5 +1,6 @@
 package jz.example.user.business.auth.service;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jz.example.user.base.UserPublicService;
 import jz.example.user.base.result.ResponseData;
@@ -7,6 +8,8 @@ import jz.example.user.base.util.EmptyUtil;
 import jz.example.user.business.auth.item.LoginItem;
 import jz.example.user.business.auth.mapper.AuthMapper;
 import jz.example.user.business.auth.pojo.User;
+import jz.example.user.config.redis.RedisUtil;
+import jz.example.user.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +22,8 @@ public class AuthService extends UserPublicService {
 
     @Autowired
     private AuthMapper mapper;
+    @Autowired
+    private RedisUtil redisUtil;
 
     /**
      * @Description: 登录实现
@@ -41,8 +46,14 @@ public class AuthService extends UserPublicService {
             return ResponseData.fail("账号密码错误，请重新输入，谢谢！");
         }
         //登录成功
-        info.setPwd("");
-        return ResponseData.success(info);
+        String token = StringUtil.getUUID() + info.getMobile();
+        if(redisUtil.set(info.getMobile(),token,180)){
+            info.setPwd("");
+            loginItem.setToken(token);
+            BeanUtil.copyProperties(info,loginItem);
+            return ResponseData.success(loginItem);
+        }
+        return ResponseData.fail("系统异常，请联系管理员，谢谢！");
     }
 
 

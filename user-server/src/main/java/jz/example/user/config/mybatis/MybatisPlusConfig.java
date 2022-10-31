@@ -1,4 +1,4 @@
-package jz.example.user.config;
+package jz.example.user.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

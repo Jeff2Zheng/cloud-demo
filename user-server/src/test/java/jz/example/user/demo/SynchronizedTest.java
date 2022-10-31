@@ -1,6 +1,6 @@
 package jz.example.user.demo;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @Author JZ

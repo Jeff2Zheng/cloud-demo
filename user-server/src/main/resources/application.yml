@@ -30,6 +30,21 @@ spring:
     virtual-host: /
     username: guest
     password: guest
+
+  # 集成redis相关信息
+  redis:
+    database: 0
+    host: 42.192.37.32
+    port: 6025
+    password:
+    lettuce:
+      pool:
+        max-active: 3 # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 1 # 连接池中的最大空闲连接
+        min-idle: 1 # 连接池中的最小空闲连接
+        max-wait: -1s # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    timeout: 360000s
+
 #es
 elasticsearch:
   clientUrl: http://42.192.37.32:9200
