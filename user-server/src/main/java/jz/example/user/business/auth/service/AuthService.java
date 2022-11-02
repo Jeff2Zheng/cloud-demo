@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jz.example.user.base.UserPublicService;
 import jz.example.user.base.result.ResponseData;
 import jz.example.user.base.util.EmptyUtil;
+import jz.example.user.business.auth.item.InfoQueryPageItem;
 import jz.example.user.business.auth.item.LoginItem;
 import jz.example.user.business.auth.mapper.AuthMapper;
 import jz.example.user.business.auth.pojo.User;
@@ -134,10 +135,10 @@ public class AuthService extends UserPublicService {
 //     * @Author: JZ
 //     * @date: 2022/4/3
 //     */
-//    public ResponseData page(InfoQueryPageItem pageItem){
-//        InfoQueryPageItem userPage = mapper.selectUserPage(pageItem);
-//        return ResponseData.success(userPage);
-//    }
+    public ResponseData page(InfoQueryPageItem pageItem){
+        InfoQueryPageItem userPage = mapper.selectUserPage(pageItem);
+        return ResponseData.success(userPage);
+    }
 //
 //    /**
 //     * @Description: xml自定义多表分页查询

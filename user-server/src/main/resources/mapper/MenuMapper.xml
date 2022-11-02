@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="jz.example.user.business.menu.mapper.MenuMapper">
+
+    <select id="selectMenuData" resultType="jz.example.user.business.menu.item.MenuInitializationItem">
+        SELECT
+            id,
+            auth_level,
+            parent_id,
+            auth_remark,
+            auth_path
+        FROM
+            jz_menu
+    </select>
+
+</mapper>
