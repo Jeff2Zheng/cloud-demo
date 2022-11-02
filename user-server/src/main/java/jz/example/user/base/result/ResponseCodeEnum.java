@@ -12,7 +12,8 @@ public enum ResponseCodeEnum {
     UNAUTHORIZED(403, "抱歉，您没有访问权限"),
     NOT_FOUND(404, "路径不存在，请检查路径是否正确"),
     METHOD_NOT_ALLOWED(405, "不支持'%s'请求"),
-    MESSAGE_NOT_READABLE(400, "参数格式转换错误");
+    MESSAGE_NOT_READABLE(400, "参数格式转换错误"),
+    NOT_TOKEN(999, "token不存在");
 
     private Integer code;
     private String message;
