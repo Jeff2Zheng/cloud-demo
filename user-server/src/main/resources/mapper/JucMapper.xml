@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="jz.example.user.business.juc.mapper.JucMapper">
+
+    <select id="selectJucPage" resultType="jz.example.user.business.juc.item.JucQueryPageItem">
+        select *
+        from jz_juc
+        <trim prefix="where" prefixOverrides="AND">
+            <if test="jucName != null and jucName != ''">
+                juc_name = #{jucName}
+            </if>
+        </trim>
+    </select>
+
+
+</mapper>
