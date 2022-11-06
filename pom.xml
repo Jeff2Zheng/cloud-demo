@@ -40,7 +40,7 @@
         <spring-cloud.version>2021.0.4</spring-cloud.version>
         <hutool.version>5.7.10</hutool.version>
         <elasticsearch.version>7.12.1</elasticsearch.version>
-        <ali.json.version>1.2.41</ali.json.version>
+        <ali.json.version>2.0.12</ali.json.version>
         <mybatis.p.version>3.4.2</mybatis.p.version>
         <mybatis.generator.version>3.5.0</mybatis.generator.version>
     </properties>
