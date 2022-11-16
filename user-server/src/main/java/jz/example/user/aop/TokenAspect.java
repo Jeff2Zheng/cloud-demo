@@ -26,7 +26,7 @@ public class TokenAspect {
 
     @After("jz.example.user.aop.TokenAspect.tokenOperation()")
     public void doTokenCheck() {
-       // System.out.println("后置通知");
+        System.out.println("后置通知");
     }
 
     public TokenAspect() {
